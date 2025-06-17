@@ -1,0 +1,84 @@
+.update {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 150px;
+  margin: auto;
+  width: 42%;
+  height: 40%;
+  background-color: white;
+  padding: 50px;
+  z-index: 999;
+  & > form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  & > form > input[type="text"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    width: 200px;
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    }
+  }
+
+  & > form > input[type="file"] {
+    font-size: 14px;
+  }
+
+  .file-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  button {
+    width: 10%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
+
+    &:disabled {
+      background-color: #7aa7f7;
+      cursor: not-allowed;
+    }
+  }
+
+  button.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #888;
+    font-weight: bold;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
